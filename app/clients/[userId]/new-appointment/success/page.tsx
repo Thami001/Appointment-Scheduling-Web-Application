@@ -5,7 +5,6 @@ import {getAppointments} from "@/lib/actions/appointment.actions";
 import {Technicians} from "@/constants";
 import {formatDateTime} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
-import {getUser} from "@/lib/actions/client.actions";
 
 
 const Success = async ({params: {userId}, searchParams}: SearchParamProps) => {
