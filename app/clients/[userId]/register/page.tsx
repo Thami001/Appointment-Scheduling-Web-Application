@@ -1,17 +1,22 @@
 import React from 'react';
 import Image from "next/image";
 import RegisterForm from "@/components/forms/registerForm";
-import {getUser} from "@/lib/actions/client.actions";
+import {getClient, getUser} from "@/lib/actions/client.actions";
+import {redirect} from "next/navigation";
 
 const Register = async({params: {userId}} : SearchParamProps) => {
     const user = await getUser(userId)
+    const client = await getClient(userId)
 
+    if(client){
+        redirect(`/clients/${userId}/new-appointment`)
+    }
 
     return (
         <div className={"flex h-screen max-h-screen"}>
             <section className={"remove-scrollbar container"}>
                 <div className={"sub-container max-w-[860px] flex-1 flex-col py-10"}>
-                    <Image src={"/assets/icons/Logo-full.svg"} alt={"patient"} width={1000} height={1000}
+                    <Image src={"/assets/icons/logo-full.svg"} alt={"patient"} width={1000} height={1000}
                            className={"mb-12 h-10 w-fit"}/>
                     <RegisterForm user={user}/>
                     <p className={"copyright py-12"}>
