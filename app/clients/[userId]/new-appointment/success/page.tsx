@@ -22,7 +22,7 @@ const Success = async ({params: {userId}, searchParams}: SearchParamProps) => {
                     <Image src={"/assets/icons/logo-full.svg"} alt={"logo"} width={1000} height={1000} className={"h-10 w-fit"} />
                 </Link>
 
-                <section>
+                <section className={"flex flex-col items-center"}>
                     <Image src={"/assets/gifs/success.gif"} alt={"success"} width={300} height={200}/>
                     <h2 className={"header mb-6 max-w-[600px] text-center"}>
                         Your <span className={"text-green-500"}>Appointment Request</span> has been successfully
@@ -44,7 +44,7 @@ const Success = async ({params: {userId}, searchParams}: SearchParamProps) => {
                         </p>
                     </div>
                     <div className={"flex gap-2"}>
-                        <Image src={"/assets/icons/calender.svg"} alt={"Calender"} height={24} width={24}/>
+                        <Image src={"/assets/icons/calendar.svg"} alt={"Calendar"} height={24} width={24}/>
                         <p>
                             {formatDateTime(appointment.schedule).dateTime}
                         </p>
