@@ -23,7 +23,7 @@ const Success = async ({params: {userId}, searchParams}: SearchParamProps) => {
                 </Link>
 
                 <section className={"flex flex-col items-center"}>
-                    <Image src={"/assets/gifs/success.gif"} alt={"success"} width={300} height={200}/>
+                    <Image src={"/assets/gifs/success.gif"} alt={"success"} width={300} height={200} unoptimized/>
                     <h2 className={"header mb-6 max-w-[600px] text-center"}>
                         Your <span className={"text-green-500"}>Appointment Request</span> has been successfully
                         submitted
